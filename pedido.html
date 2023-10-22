@@ -90,75 +90,104 @@
 
         <section class="formulario">
             <div class="interface">
-                <h2 class="titulo">FAÇA LOGIN <span>OU INSCREVA-SE</span></h2>
+                <h2 class="titulo">ENTRE NA CONTA <span>OU INSCREVA-SE</span></h2>
 
-                <div class="flex">
-                    <div>
-                        <img src="assets/imagens/logo-padaria.png" alt="logo padaria" width="100%">
-                    </div>
-                    <div class="form-content">
-                        <header>Login</header>
-                        <form action="#">
-                            <div class="field input-field">
-                                <input type="email" placeholder="Email" class="input">
+                <div class="flex" style="align-items: center; justify-content: center;">
+                    <main class="container-login">
+                        <img src="assets/imagens/logo-padaria.png"  class="logo" alt="logo padaria" width="100%">
+                        <form action="">
+                            <div class="input-field">
+                                <input type="text" name="username" id="username"
+                                    placeholder="Insira seu login">
+                                <div class="underline"></div>
                             </div>
-    
-                            <div class="field input-field">
-                                <input type="password" placeholder="Password" class="password">
-                                <i class='bx bx-hide eye-icon'></i>
+                            <div class="input-field">
+                                <input type="password" name="password" id="password"
+                                    placeholder="Insira sua senha">
+                                <div class="underline"></div>
                             </div>
-    
-                            <div class="form-link">
-                                <a href="#" class="forgot-pass">Forgot password?</a>
-                            </div>
-    
-                            <div class="field button-field">
-                                <button>Login</button>
-                            </div>
+                
+                            <input id="login" type="submit" value="Entrar">
                         </form>
-    
-                        <div class="form-link">
-                            <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                
+                        <div class="footer-login">
+                            <span>Ou Conecte com o Google ou Facebook</span>
+                            <div class="social-fields">
+                                <div class="social-field google">
+                                    <a href="#">
+                                        <i class="bi bi-google"></i>
+                                        Sign in with Google
+                                    </a>
+                                </div>
+                                <div class="social-field facebook">
+                                    <a href="#">
+                                        <i class="bi bi-facebook"></i>
+                                        Sign in with Facebook
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <span>Não possui conta? <a href="#" style="text-decoration: none;">Crie uma conta</a></span>
                         </div>
-                    </div>
-    
-                    <div class="line"></div>
-    
-                    <div class="media-options">
-                        <a href="#" class="field facebook">
-                            <i class='bx bxl-facebook facebook-icon'></i>
-                            <span>Login with Facebook</span>
-                        </a>
-                    </div>
-    
-                    <div class="media-options">
-                        <a href="#" class="field google">
-                            <img src="#" alt="" class="google-img">
-                            <span>Login with Google</span>
-                        </a>
-                    </div>
+                    </main>
                 </div>
             </div><!--interface-->
         </section><!--formulario--> 
         
+        <section class="sobre">
+            <div class="interface" style="border-radius: 15px; box-shadow: 0px 5px 10px #696969;padding: 30px;">
+                <h2 class="titulo">Carrinho</h2>
+    
+                <table class="cart-table">
+                  <thead>
+                    <tr>
+                      <th class="table-head-item first-col">Item</th>
+                      <th class="table-head-item second-col">Preço</th>
+                      <th class="table-head-item third-col">Quantidade</th>
+                    </tr>
+                  </thead>
         
-
-        <section class="portfolio">
-            <div class="interface">
-                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
-                <div class="flex">
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
-                        <div class="overlay">Projeto 1</div>
-                    </div>
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
-                        <div class="overlay">Projeto 2</div>
-                    </div>
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
-                        <div class="overlay">Projeto 3</div>
-                    </div>
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--portfolio-->
+                  <tbody>
+                    <tr class="cart-product">
+                      <td class="product-identification">
+                        <img src="assets/imagens/4_grãos-removebg-preview.png" alt="Miniatura" class="cart-product-image">
+                        <strong class="cart-product-title">4 GRÃOS</strong>
+                      </td>
+                      <td>
+                        <span class="cart-product-price">R$9,00</span>
+                      </td>
+                      <td>
+                        <input type="number" value="1" min="0" class="product-qtd-input">
+                        <button type="button" class="remove-product-button">Remover</button>
+                      </td>
+                    </tr>
+                    <tr class="cart-product">
+                      <td class="product-identification">
+                        <img src="assets/imagens/brioche-removebg-preview.png" alt="Poster 3" class="cart-product-image">
+                        <strong class="cart-product-title">BRIOCHE</strong>
+                      </td>
+                      <td>
+                        <span class="cart-product-price">R$12,00</span>
+                      </td>
+                      <td>
+                        <input type="number" value="1" min="0" class="product-qtd-input">
+                        <button type="button" class="remove-product-button">Remover</button>
+                      </td>
+                    </tr> 
+                  </tbody>
+        
+                  <tfoot>
+                    <tr>
+                      <td colspan="3" class="cart-total-container">
+                        <strong>Total</strong>
+                        <span>R$0,00</span>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <button type="button" class="purchase-button">Finalizar Compra</button>
+            </div>
+        </section>
 
     </main>
 
@@ -167,8 +196,17 @@
             <div class="line-footer">
                 <div class="flex">
                     <div class="logo-footer">
-                        <img src="/assets/imagens/logo-padaria.png" alt="Logotipo Padaria Vitória" width="100%">
+                        <img src="assets/imagens/logo-padaria.png" alt="Logotipo Padaria Vitória" width="100%">
                     </div><!--logo-footer-->
+                    <nav class="menu-footer">
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="cardapio.html">Cardápio</a></li>
+                            <li><a href="pedido.html">Pedido</a></li>
+                            <li><a href="galeria.html">Galeria</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
                     <div class="btn-social">
                         <a href="#"><button><i class="bi bi-instagram"></i></button></a>
                         <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
@@ -178,7 +216,8 @@
             </div><!--line-footer-->
 
             <div class="line-footer borda">
-                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:panificadora_vitoria@hotmail.com">panificadora_vitoria@hotmail.com</a>
+                <p><i class="bi bi-envelope-fill"></i> <a
+                        href="mailto:panificadora_vitoria@hotmail.com">panificadora_vitoria@hotmail.com</a>
                 </p>
             </div><!--line-footer-->
         </div><!--interface-->

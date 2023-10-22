@@ -488,8 +488,223 @@ section.galeria .flex {
 }
 
 /* FORMULÁRIO LOGIN */
+.container-login {
+    background: #FBF9EF;
+    min-width: 520px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 60px 0px 0px 50px;
+    text-align: center;
+}
 
+.container-login  img {
+    margin-bottom: 2rem;
+    position: relative;
+    text-align: center;
+}
 
+form  {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#login {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(to left, #4776E6, #8e54e9);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#login:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #4776E6, #8e54e9);
+}
+
+.footer-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer-login span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer-login .social-field {
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.footer-login .social-field a i {
+    margin: 0 0.5rem;
+    width: 15px;
+}
+
+.footer-login .social-field a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-login .social-field.google{
+    background: linear-gradient(to right, #F27657, #C96147);
+}
+
+.footer-login .social-field.facebook {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+/* tabela carrinho de compras */
+.cart-table {
+    margin-top: 50px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-head-item {
+    text-align: start;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 6px;
+    text-transform: uppercase;
+  }
+  
+  .second-col,
+  .third-col {
+    width: 26%;
+  }
+  
+  .cart-product td {
+    padding: 8px 0;
+  }
+  
+  .product-identification {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-product-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .cart-product-title {
+    margin-left: 16px;
+    font-size: 18px;
+  }
+  
+  .cart-product-price {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .product-qtd-input {
+    width: 48px;
+    height: 34px;
+    border-radius: 6px;
+    border: 2px solid var(--blue);
+    text-align: center;
+    background: #eee;
+  }
+  
+  .remove-product-button {
+    margin-left: 12px;
+    background: #ff0000;
+    color: var(--white);
+    padding: 10px 8px;
+    border: 0;
+    border-radius: 6px;
+  
+    transition: filter 0.2s;
+  }
+  
+  .remove-product-button:hover {
+    filter: brightness(0.8);
+  }
+  
+  .cart-total-container {
+    border-top: 1px solid var(--gray);
+    text-align: end;
+    padding: 6px 16px 0 0;
+    font-size: 18px;
+  }
+  
+  .cart-total-container strong {
+    margin-right: 12px;
+  }
+  
+  .purchase-button {
+    display: flex;
+    margin: 24px auto 0;
+    background: #F7F2DE;
+    color: #000;
+    border: 0;
+    border-radius: 6px;
+    padding: 16px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+  
+    transition: filter 0.2s;
+  }
+  
 
 
 @media screen and (max-width: 1020px) {
@@ -602,9 +817,39 @@ section.galeria .flex {
     footer .line-footer {
         text-align: center;
     }
+
+    /* LOGIN */
+    .container-login {
+        min-width: 300px;
+        margin: 60px 10px ;
+        
+    }
+    /* CARRINHO */
+    .cart-product-title {
+        margin-top: 6px;
+      }
+    
+      .product-qtd-input {
+        display: block;
+        margin: 0 auto;
+      }
+    
+      .remove-product-button {
+        display: block;
+        margin: 8px auto 0;
+      }
 }
 @media screen and (min-width: 1020px) {
     .video{
         padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    /* LOGIN */
+    .container-login {
+        min-width: 200px;
+        margin: 60px 10px ;
+        
     }
 }
